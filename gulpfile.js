@@ -4,12 +4,12 @@ var gulp = require('gulp');
     rename = require("gulp-rename");
     cssmin = require('gulp-cssmin');
     compass = require('gulp-compass');
-    webserver = require('gulp-webserver');
     connect = require('gulp-connect');
     jshint = require('gulp-jshint');
+    watch = require('gulp-watch');
 
 var paths = {
-  ROOT_DIR: '.',
+  ROOT_DIR: './',
   SASS_DIR: 'sass',
   CSS_DIR: 'css',
   SASS_THEME_DIR: 'css/theme/source',
@@ -24,11 +24,10 @@ var paths = {
 // Cannot use gulp-webserver
 gulp.task('connect', function() {
   connect.server({
-    root: '.',
+    root: [__dirname],
     livereload: true
   });
 });
-
 
 gulp.task('qunit', function() {
   return gulp.src('./test/*.html')
@@ -70,3 +69,7 @@ gulp.task('lint', function() {
 });
 
 gulp.task('default', ['qunit', 'compress']);
+
+gulp.task('watch', function() {
+    gulp.watch(paths.SASS_THEME_DIR, ['compass']);
+});

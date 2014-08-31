@@ -1,0 +1,310 @@
+/**
+ * Radical theme for reveal.js.
+ * Author: Claudina Sarahe
+ */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@font-face {
+  font-family: "BullenReg";
+  src: "../../lib/font/bullen-regular/bullen-regular";
+}
+@font-face {
+  font-family: "BullenBold";
+  src: url('../../fonts/bold');
+  src: url('../../fonts/bold?#iefix') format('embedded-opentype'), "../../lib/font/bullen-bold/bullen-bold";
+}
+@font-face {
+  font-family: "BullenItalic";
+  src: url('../../fonts/normal');
+  src: url('../../fonts/normal?#iefix') format('embedded-opentype'), "../../lib/font/bullen-italic/bullen-italic";
+  font-weight: italic;
+}
+@font-face {
+  font-family: "BullenBoldItalic";
+  src: url('../../fonts/bold');
+  src: url('../../fonts/bold?#iefix') format('embedded-opentype'), "../../lib/font/bullen-bolditalic/bullen-bolditalic";
+  font-weight: italic;
+}
+.slide {
+  height: 100%;
+}
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
+
+.primary-accent {
+  color: #b58900;
+}
+
+.secondary-accent {
+  color: #2aa198;
+}
+
+.tertiary-accent {
+  color: #d33682;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.reveal ul {
+  margin-bottom: 2em;
+}
+
+.reveal blockquote {
+  font-family: 'BullenBoldItalic';
+  font-weight: bold;
+  position: relative;
+  width: 80%;
+  margin: 5px auto;
+  padding: 20px;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: left;
+  background: rgba(211, 54, 130, 0.05);
+  box-shadow: none;
+  border-left: 8px solid #6c71c4;
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal .quotes {
+  text-align: justify;
+}
+
+.trends figure {
+  background: white;
+  border-radius: 1em;
+}
+
+.reveal h1 {
+  font-size: 2.618em;
+  line-height: 4.236em;
+}
+
+.reveal h2 {
+  font-size: 2.618em;
+}
+
+.reveal h4 {
+  font-size: 1em;
+}
+
+.reveal p {
+  line-height: 1.618em;
+}
+.reveal h2 {
+  color: #b58900;
+  margin-bottom: 1em;
+}
+.reveal time {
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  display: block;
+}
+.reveal figure {
+  background: white;
+}
+.reveal figcaption {
+  font-size: .5em;
+}
+.reveal q {
+  background: #d33682;
+  color: white;
+  font-family: "BullenItalic";
+  font-size: 1.25em;
+  line-height: 1.4em;
+}
+.reveal section img {
+  border-color: white !important;
+}
+
+.s-wrap {
+  height: 100%;
+}
+
+.l-triptych .s-wrap {
+  align-items: stretch;
+  display: flex;
+}
+.l-triptych .pane {
+  width: 33%;
+}
+.l-triptych .pane:first-child {
+  background: #2aa198;
+}
+
+.l-diptych .s-wrap {
+  align-items: stretch;
+  display: flex;
+}
+.l-diptych .pane {
+  width: 50%;
+}
+.l-diptych .pane:first-child {
+  background: #2aa198;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #002b36;
+  background-color: #002b36;
+}
+
+.reveal {
+  font-family: "BullenBold";
+  font-size: 1.618em;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #93a1a1;
+}
+
+::selection {
+  color: white;
+  background: #d33682;
+  text-shadow: none;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #b58900;
+  font-family: "BullenBold";
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.reveal h1 {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.reveal h2 {
+  color: #b58900;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+  color: #93a1a1;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  -ms-transition: color .15s ease;
+  -o-transition: color .15s ease;
+  transition: color .15s ease;
+}
+
+.reveal a:not(.image):hover {
+  color: #e58ab6;
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #6c7c7c;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #93a1a1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #93a1a1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #93a1a1;
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #93a1a1;
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #93a1a1;
+}
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #93a1a1;
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #e58ab6;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #e58ab6;
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #e58ab6;
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #e58ab6;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+  background: #93a1a1;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #93a1a1;
+}
+
+/*# sourceMappingURL=shears.css.map */

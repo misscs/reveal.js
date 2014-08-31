@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>SassChop A Style/Cut above the rest</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -14,8 +14,8 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/reveal.css">
+		<link rel="stylesheet" href="css/theme/shears.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,29 +42,160 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+				<section class="slide" data-background="img/barbershop.jpg">
+					<h1>SassChops</h1>
 				</section>
 
+				<!-- Imports/Partials -->
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<h1>@import "partials";</h1>
+							<p>File/code management</p>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Imports/Partials -->
+
+				<!-- Variables -->
+				<section>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<h1>$variables: 'Used to store bits of information';</h1>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+
+					<section class="slide l-diptych">
+						<div class="s-wrap">
+							<div class="pane">
+								<p>handy places to store values that you want to reuse over and over again throughout your Sass document.</p>
+
+								<pre><code>
+								$variables: 'Used to store bits of information';
+
+								.marquee:before {
+									content: $variables;
+								}
+							</code></pre>
+							</div>
+							<div class="pane">
+								.marquee:before {
+									content: 'Used to store bits of information';
+								}
+							</div>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Variables -->
+
+				<!-- Lists -->
+				<section>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<h1>$lists: styles styles styles ;</h1>
+							<p></p>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Lists -->
+
+
+				<!-- Functions -->
+				<section>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<h1>function heavy_duty();</h1>
+							<p>Perform calculations and return value</p>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Functions -->
+
+				<!-- Maps -->
+				<section>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<pre><code>
+								$maps: (
+									'x': 'the spot'
+								);
+							</code></pre>
+
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Maps -->
+
+				<!-- Control Directives -->
+				<section>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<pre><code>
+							@for each $sheer in $barber-tools
+								@while each $sheer.sharpness > 1
+									Use this shear
+								@else
+									Sharpen tools immediately
+							</code></pre>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Control Directives -->
+
+				<!-- Mixins -->
+				<section>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<h1>@include mixin();</h1>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Mixins -->
+
+				<!-- Extends -->
+				<section>
+					<section class="slide l-billboard">
+						<div class="s-wrap">
+							<h1>@extend %extended;</h1>
+							<p>Reuse code without adding bloat</p>
+						</div>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section><!-- //@end Extends -->
+
+				<section class="slide l-triptych">
+					<div class="s-wrap">
+						<div class="pane">First pane</div>
+						<div class="pane">Second Pane</div>
+						<div class="pane">Third Pane</div>
+					</div>
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
 				</section>
 
 				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
+				<section class="slide">
+					<section class="slide">
 						<h2>Vertical Slides</h2>
 						<p>
 							Slides can be nested inside of other slides,
@@ -74,18 +205,18 @@
 							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
 						</a>
 					</section>
-					<section>
+					<section class="slide">
 						<h2>Basement Level 1</h2>
 						<p>Press down or up to navigate.</p>
 					</section>
-					<section>
+					<section class="slide">
 						<h2>Basement Level 2</h2>
 						<p>Cornify</p>
 						<a class="test" href="http://cornify.com">
 							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
 						</a>
 					</section>
-					<section>
+					<section class="slide">
 						<h2>Basement Level 3</h2>
 						<p>That's it, time to go back up.</p>
 						<a href="#/2" class="image">
@@ -94,14 +225,14 @@
 					</section>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Slides</h2>
 					<p>
 						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
 					</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Point of View</h2>
 					<p>
 						Press <strong>ESC</strong> to enter the slide overview.
@@ -111,14 +242,14 @@
 					</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Works in Mobile Safari</h2>
 					<p>
 						Try it out! You can swipe through the slides and pinch your way to the overview.
 					</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Marvelous Unordered List</h2>
 					<ul>
 						<li>No order here</li>
@@ -128,7 +259,7 @@
 					</ul>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Fantastic Ordered List</h2>
 					<ol>
 						<li>One is smaller than...</li>
@@ -189,7 +320,7 @@
 					</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Global State</h2>
 					<p>
 						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
@@ -210,7 +341,7 @@ Reveal.addEventListener( 'customevent', function() {
 					</code></pre>
 				</section>
 
-				<section>
+				<section class="slide">
 					<section data-background="#007777">
 						<h2>Slide Backgrounds</h2>
 						<p>
@@ -244,7 +375,7 @@ Reveal.addEventListener( 'customevent', function() {
 					</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Clever Quotes</h2>
 					<p>
 						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
@@ -256,7 +387,7 @@ Reveal.addEventListener( 'customevent', function() {
 					</blockquote>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Pretty Code</h2>
 					<pre><code data-trim contenteditable>
 function linkify( selector ) {
@@ -277,7 +408,7 @@ function linkify( selector ) {
 					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Intergalactic Interconnections</h2>
 					<p>
 						You can link between slides internally,
@@ -285,7 +416,7 @@ function linkify( selector ) {
 					</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<section id="fragments">
 						<h2>Fragmented Views</h2>
 						<p>Hit the next arrow...</p>
@@ -300,7 +431,7 @@ function linkify( selector ) {
 							This slide has fragments which are also stepped through in the notes window.
 						</aside>
 					</section>
-					<section>
+					<section class="slide">
 						<h2>Fragment Styles</h2>
 						<p>There's a few styles of fragments, like:</p>
 						<p class="fragment grow">grow</p>
@@ -315,14 +446,14 @@ function linkify( selector ) {
 					</section>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Spectacular image!</h2>
 					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
 						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
 					</a>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Export to PDF</h2>
 					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
 					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
@@ -331,7 +462,7 @@ function linkify( selector ) {
 					</script>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Take a Moment</h2>
 					<p>
 						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
@@ -339,7 +470,7 @@ function linkify( selector ) {
 					</p>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h2>Stellar Links</h2>
 					<ul>
 						<li><a href="http://slid.es">Try the online editor</a></li>
@@ -348,7 +479,7 @@ function linkify( selector ) {
 					</ul>
 				</section>
 
-				<section>
+				<section class="slide">
 					<h1>THE END</h1>
 					<h3>BY Hakim El Hattab / hakim.se</h3>
 				</section>
@@ -368,10 +499,19 @@ function linkify( selector ) {
 				controls: true,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// The "normal" size of the presentation, aspect ratio will be preserved
+		    // when the presentation is scaled to fit different resolutions. Can be
+		    // specified using percentage units.
+        width: '100%',
+    		height: '100%',
+
+		    // Factor of the display size that should remain empty around the content
+		    margin: 0,
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
